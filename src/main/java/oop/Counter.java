@@ -4,33 +4,42 @@ package oop;
 // is used to count people passing through an entrance etc.
 // Each click will add one to the counter's count
 
-public class Counter {
+public class Counter
+{
     private int count;  // current count , initially 0
     private int limit;
 
     // Constructor
-    public Counter(int limit) {
+    public Counter(int limit)
+    {
         this.limit = limit; // 'this.' distinguishes field from parameter
         System.out.println("Counter constructor called, limit set to " + limit);
     }
 
-    public Counter() {   // no-argument (default) constructor
+    public Counter()
+    {   // no-argument (default) constructor
         limit = 10;
     }
 
-    public int getCount() {
+    public int getCount()
+    {
         return this.count;
     }
 
     /**
      * click() increments the value of this counter by 1.
      */
-    public void click() {
-        if (count <= limit) {
+    public void click()
+    {
+        if (count <= limit)
+        {
             count = count + 1;
-        } else {
-            System.out.println("Limit Reached");
         }
+        else
+            {
+                System.out.println("Limit Reached");
+        }
+
         System.out.println("Counter clicked! count = " + count);
     }
 
